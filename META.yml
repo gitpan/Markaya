@@ -12,7 +12,6 @@ no_index:
     - t
 requires: 
   HTML::Entities: 0
-  Moose: 0
   YAML::LibYAML: 0.16
-  perl: 5.8.8
-version: 0.0.1
+  perl: 5.8.3
+version: 0.0.2

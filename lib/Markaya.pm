@@ -2,24 +2,26 @@ package Markaya;
 
 use warnings;
 use strict;
-use v5.8.8;
-use Moose;
+use v5.8.3;
 use HTML::Entities;
 use YAML::LibYAML qw();
 
-our $VERSION = '0.0.1';
+our $VERSION = '0.0.2';
 
-has 'document' => (is => 'rw');
+sub new {
+    my $class = shift;
+    return bless {}, $class;
+}
 
 sub load {
     my $self = shift;
     my $str  = shift;
-    $self->document( YAML::LibYAML::Load($str) )
+    $self->{document} = YAML::LibYAML::Load($str);
 }
 
 sub to_html {
     my $self = shift;
-    _to_html($self->document);
+    _to_html($self->{document});
 }
 
 sub _to_html {
@@ -103,23 +105,6 @@ the converted HTML.
 Do not use this. Internal recursive function.
 
 =back
-
-=head1 DIAGNOSTICS
-
-=over
-
-=item C<< Error message here, perhaps with %s placeholders >>
-
-[Description of error here]
-
-=item C<< Another error message here >>
-
-[Description of error here]
-
-[Et cetera, et cetera]
-
-=back
-
 
 =head1 CONFIGURATION AND ENVIRONMENT
 
