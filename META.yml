@@ -14,4 +14,4 @@ requires:
   HTML::Entities: 0
   YAML::LibYAML: 0.16
   perl: 5.8.3
-version: 0.0.2
+version: 0.0.3

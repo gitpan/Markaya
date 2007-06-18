@@ -6,7 +6,7 @@ use v5.8.3;
 use HTML::Entities;
 use YAML::LibYAML qw();
 
-our $VERSION = '0.0.2';
+our $VERSION = '0.0.3';
 
 sub new {
     my $class = shift;
@@ -65,7 +65,7 @@ Markaya - Markup As YAML
 
 =head1 VERSION
 
-This document describes Markaya version 0.0.1
+This document describes Markaya version 0.0.2
 
 =head1 SYNOPSIS
 
@@ -83,7 +83,7 @@ document is also a valid YAML document.
 
 For detail, see doc/Spec in the distribution tarball.
 
-=head1 INTERFACE 
+=head1 INTERFACE
 
 =over
 
@@ -112,7 +112,7 @@ Markaya requires no configuration files or environment variables.
 
 =head1 DEPENDENCIES
 
-None.
+L<YAML::LibYAML>
 
 =head1 INCOMPATIBILITIES
 
@@ -125,7 +125,6 @@ No bugs have been reported.
 Please report any bugs or feature requests to
 C<bug-markaya@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org>.
-
 
 =head1 AUTHOR
 

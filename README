@@ -1,39 +1,37 @@
-Markaya version 0.0.1
+html:
+  - head:
+    - title: Markaya
+  - body:
+    - h1: INSTALLATION
 
-[ REPLACE THIS...
+    - p: >
+        To install this module, run the following commands:
 
-  The README is used to introduce the module and provide instructions on
-  how to install the module, any machine dependencies it may have (for
-  example C compilers and installed libraries) and any other information
-  that should be understood before the module is installed.
+    - pre: |
+        perl Makefile.PL
+        make
+        make test
+        make install
 
-  A README file is required for CPAN modules since CPAN extracts the
-  README file from a module distribution so that people browsing the
-  archive can use it get an idea of the modules uses. It is usually a
-  good idea to provide version information here so that people can
-  decide whether fixes for the module are worth downloading.
-]
+    - h1: DEPENDENCIES
 
+    - ul:
+      - li: YAML::LibYAML
 
-INSTALLATION
+    - h1: DESCRIPTION
 
-To install this module, run the following commands:
+    - p: >
+        All documents for Markaya is written in Markaya format. You
+        can compile them into HTML format by using this command
+        (replace doc/README to other demended files):
 
-    perl Makefile.PL
-    make
-    make test
-    make install
+    - pre: |
+        perl perl/Markaya/bin/markaya < doc/README
 
+    - h1: COPYRIGHT AND LICENCE
 
+    - pre: |
+        Copyright (C) 2007, Kang-min Liu
 
-DEPENDENCIES
-
-None.
-
-
-COPYRIGHT AND LICENCE
-
-Copyright (C) 2007, Kang-min Liu
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+        This library is free software; you can redistribute it and/or modify
+        it under the same terms as Perl itself.
